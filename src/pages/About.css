@@ -1,0 +1,152 @@
+#about-info {
+  min-height: 50vh;
+  background-image: url('./img/opd9_wd5i_181129.jpg');
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  position: relative; /* Ensures that absolutely positioned children are positioned relative to this container */
+  overflow: hidden; /* Prevents the snowflakes from causing a scroll */
+}
+
+.snowflake {
+position: absolute;
+top: 0;
+width: 10px;
+height: 10px;
+background-color: rgba(255, 255, 255, 0.7); /* Light white color for the snowflake */
+border-radius: 50%; /* Makes the snowflakes round */
+box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.2); /* Glow effect */
+pointer-events: none; /* Ensures the snowflake does not affect user interaction with other elements */
+animation: fall linear infinite;
+}
+
+@keyframes fall {
+0% { transform: translateY(0) scale(1); opacity: 1; }
+100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+}
+
+.snowflake:nth-child(1) { left: 10%; animation-duration: 3s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 4s; animation-delay: 1s; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 5s; animation-delay: 2s; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 3.5s; animation-delay: 1.5s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 4.5s; animation-delay: 0.5s; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 6s; animation-delay: 2.5s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 5.5s; animation-delay: 1s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 4s; animation-delay: 3s; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 3.5s; animation-delay: 1.5s; }
+.snowflake:nth-child(10) { left: 95%; animation-duration: 5s; animation-delay: 2s; }
+
+
+#about img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 20px #000;
+  transition: transform 0.5s ease;
+}
+
+#about img:hover {
+  transform: scale(1.1667); /* This scales the image from 300px to 350px (350/300 = 1.1667) */
+}
+
+#about span:hover {
+  color: #1622c9;
+  filter: drop-shadow(0 0 0.75rem rgb(29, 28, 29));
+  text-shadow: 0 0 20px rgb(223, 217, 223), 0 0 40px rgb(20, 19, 20);
+  transition: all 0.4s ease;
+}
+
+#about span {
+  font-size: 18px;
+  text-decoration: none;
+  color: rgb(250, 249, 251);
+}
+
+.sea-waves {
+  display: block;
+  width: 100%;
+  height: 60px;
+  position: relative;
+  background: linear-gradient(to right, hsl(300, 2%, 9%), rgb(253, 252, 252));
+}
+
+.sea-wave1 use {
+  -webkit-animation: move-forever1 10s linear infinite;
+  animation: move-forever1 10s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.sea-wave2 use {
+  -webkit-animation: move-forever2 8s linear infinite;
+  animation: move-forever2 8s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+.sea-wave3 use {
+  -webkit-animation: move-forever3 6s linear infinite;
+  animation: move-forever3 6s linear infinite;
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+}
+
+@-webkit-keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@keyframes move-forever1 {
+  0% {
+    transform: translate(85px, 0%);
+  }
+
+  100% {
+    transform: translate(-90px, 0%);
+  }
+}
+
+@-webkit-keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever2 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@-webkit-keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
+@keyframes move-forever3 {
+  0% {
+    transform: translate(-90px, 0%);
+  }
+
+  100% {
+    transform: translate(85px, 0%);
+  }
+}
+
